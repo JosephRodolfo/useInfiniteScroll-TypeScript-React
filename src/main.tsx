@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Application from './components/Application';
 import { inDev } from './utils/helpers';
 import AppRouter from './routers/AppRouter';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import '../src/components/base/base.scss'
 
 // Say something
@@ -11,9 +11,9 @@ console.log('[RWT] : Execution started');
 
 // Application to Render
 const app = (
-  <BrowserRouter>
+  <HashRouter>
     <AppRouter />
-  </BrowserRouter>
+  </HashRouter>
 );
 
 // Render application in DOM

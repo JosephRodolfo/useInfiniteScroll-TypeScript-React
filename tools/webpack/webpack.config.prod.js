@@ -1,3 +1,6 @@
+var path = require('path')
+const cwd = process.cwd();
+
 module.exports = {
   mode: 'production',
   entry: ['./src/main.tsx'],
@@ -7,6 +10,7 @@ module.exports = {
   output: {
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].chunk.js',
+    path: path.resolve(cwd, "./build"),
     clean: true,
   },
   plugins: [...require('./webpack.plugins')],
