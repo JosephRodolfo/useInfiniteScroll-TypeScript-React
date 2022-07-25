@@ -2,12 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Application from './components/Application';
 import { inDev } from './utils/helpers';
+import AppRouter from './routers/AppRouter';
+import { BrowserRouter } from 'react-router-dom';
 
 // Say something
 console.log('[RWT] : Execution started');
 
 // Application to Render
-const app = <Application/>;
+const app = (
+  <BrowserRouter>
+    <AppRouter />
+  </BrowserRouter>
+);
 
 // Render application in DOM
 ReactDOM.render(app, document.getElementById('app'));
