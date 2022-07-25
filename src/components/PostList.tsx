@@ -25,13 +25,15 @@ const PostList: React.FC = () => {
     <React.Fragment>
       <div id='main-list'>
         {articleList.map((article, index) => {
-          return <Post key={article.id} index={index} article={article} >{index}</Post>;
+          return <Post key={article.id} index={index} article={article} />;
         })}
-      </div>
 
      {scrollLoading || loading ? <img src={loader} className="loading-gif" alt="loading gif"/> : <div ref={endRef} id='hidden-div'>
         This div should come at the end
       </div>}
+      </div>
+
+
       
     </React.Fragment>
   );

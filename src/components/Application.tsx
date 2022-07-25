@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { hot } from 'react-hot-loader';
 import './Application.scss';
-import BlogLayout from './BlogLayout';
+import MainLayout from './MainLayout';
 import PostList from './PostList';
 
 // type Props = {
@@ -12,9 +12,9 @@ import PostList from './PostList';
 const Application: React.FC = () => {
 
   return (
-      <BlogLayout>
+      <MainLayout>
       <PostList />
-      </BlogLayout>
+      </MainLayout>
   );
 };
 

@@ -2,37 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { hot } from 'react-hot-loader';
 import './Application.scss';
 import { useLocation } from 'react-router-dom';
-import BlogLayout from './BlogLayout';
-
-// type Props = {
-//   article: {
-//     id: string;
-//     title: string;
-//     subtitle: string;
-//     fulltext: string;
-//     date: string;
-//   };
-// };
+import MainLayout from './MainLayout';
 
 const BlogPost: React.FC = () => {
   type Article = {
     id?: string;
     title?: string;
     subtitle?: string;
-    fulltext?: string;
+    text?: string;
     date?: string;
   };
   const [articlePost, setArticle] = useState<Article>({});
   const [postIndex, setIndex] = useState<Number>(null);
 
   type Props = {
-    article?: {
-      id?: string;
-      title?: string;
-      subtitle?: string;
-      fulltext?: string;
-      date?: string;
-    };
+    article?: Article;
     index?: number;
   };
   const location = useLocation();
@@ -48,20 +32,23 @@ const BlogPost: React.FC = () => {
   }, [articlePost]);
 
   return (
-    
-    <BlogLayout>
+    <MainLayout>
       <article className='article-card'>
         <div className='article-card-title'>
           <h2>{articlePost.title}</h2>
         </div>
         <div className='article-card-subtitle'>
           <h3>{articlePost.subtitle}</h3>
-          <div className='article-card-date'>
-            <p>{articlePost.fulltext}</p>
           </div>
-        </div>
+
+          <div className='article-card-date'>
+            <p>{articlePost.date}</p>
+          </div>
+          <div className='article-card-text'>
+            <p>{articlePost.text}</p>
+          </div>
       </article>
-    </BlogLayout>
+    </MainLayout>
   );
 };
 

@@ -1,0 +1,31 @@
+$offwhite: #fffaf0;
+$card-background: rgb(6, 37, 53);
+
+$desktop-breakpoint: 45rem;
+
+
+
+@font-face {
+    font-family: 'Delmon';
+    src: local('Delmon'), url(/src/assets/fonts/Delmon\ Delicate.ttf) format('woff');
+  
+  };
+  @font-face {
+    font-family: 'mermaid';
+    src: local('mermaid'), url(/src/assets/fonts/Mermaid1001.ttf) format('woff');
+  
+  };
+
+  @font-face {
+    font-family: 'sunflower';
+    src: local('sunflower'), url(/src/assets/fonts/MADE\ Sunflower\ PERSONAL\ USE.otf) format('woff');
+  
+  };
+  @font-face {
+    font-family: 'hussar';
+    src: local('hussar'), url(/src/assets/fonts/HussarBoldWeb-bf92.woff) format('woff');
+  
+  }
+  
+
+  $font-main: 'sunflower';

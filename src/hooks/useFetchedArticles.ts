@@ -10,7 +10,7 @@ export function useFetchedArticles() {
     let isCancelled = false;
     const fetchData = async () => {
       setLoading(true);
-      const articles = await fetchArticles(20, false);
+      const articles = await fetchArticles(20, true);
 
       !isCancelled && setArticles(articles);
       setLoading(false);
@@ -23,7 +23,7 @@ export function useFetchedArticles() {
 
 const loadMoreItems = async () => {
       setLoading(true);
-      const articles = await fetchArticles(20, false);
+      const articles = await fetchArticles(20, true);
       const updatedList = articleList.concat(articles);
       setArticles(updatedList);
       setLoading(false);

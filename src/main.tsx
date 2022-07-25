@@ -4,6 +4,7 @@ import Application from './components/Application';
 import { inDev } from './utils/helpers';
 import AppRouter from './routers/AppRouter';
 import { BrowserRouter } from 'react-router-dom';
+import '../src/components/base/base.scss'
 
 // Say something
 console.log('[RWT] : Execution started');

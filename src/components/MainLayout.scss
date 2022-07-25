@@ -1,0 +1,24 @@
+@import '/src/components/base/settings.scss';
+
+.main-heading {
+  color: $offwhite;
+}
+
+.main-heading > h1 {
+  font-family: 'mermaid';
+  font-size: 3em;
+}
+
+.main-heading {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.main-layout-container {
+  margin: 0 auto;
+  width: 100%;
+  @media (min-width: $desktop-breakpoint) {
+    max-width: 60em;
+  }
+}

@@ -1,24 +1,20 @@
 import React, { useState } from 'react';
 import { hot } from 'react-hot-loader';
-import './Application.scss';
-import PostList from './PostList';
+import { Link } from 'react-router-dom';
+import './MainLayout.scss';
 
-// type Props = {
-//   title: string;
-//   version: string;
-// };
-
-const MainLayout: React.FC = ({children}) => {
-
+const MainLayout: React.FC = ({ children }) => {
   return (
     <React.Fragment>
-      <main>
-        <div className='main-heading'>
-          <h1>Randomly Generated News Site</h1>
+      <div className='main-layout-container'>
+        <main>
+          <div className='main-heading'>
+            <h1><Link to="/">Randomly Generated News Site</Link></h1>
           </div>
 
-{children}
-      </main>
+          {children}
+        </main>
+      </div>
     </React.Fragment>
   );
 };
